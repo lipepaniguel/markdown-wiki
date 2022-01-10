@@ -16,12 +16,11 @@ Esta é uma pequena wiki que aborda os principais recursos da linguagem Markdown
 1. [Código](#código)
 1. [Texto colapsado](#texto-colapsado)
 1. [Nota de rodapé](#nota-de-rodapé)
-1. [Dicas e atalhos](#dicas)
+1. [Dicas e atalhos](#dicas-e-atalhos)
 
 <br />
 
 ## Títulos
----
 
 Podendo ir do 1 ao 6, os títulos são criados com o uso de cerquilha "#" seguido de espaço.
 
@@ -34,7 +33,6 @@ Podendo ir do 1 ao 6, os títulos são criados com o uso de cerquilha "#" seguid
 <br />
 
 ## Ferramentas de destaque de texto
----
 
 Há duas formas de se marcar uma palavra ou trecho em itálico e também duas formas de se marcar uma palavra ou trecho em negrito.
 
@@ -61,9 +59,8 @@ __também negrito__
 <br />
 
 ## Formatação de texto
----
 
-Para acrescentar um traçado horizontal, geralmente utilizado embaixo de títulos, basta utilizar três hífens seguidos "---".
+Para acrescentar um traçado horizontal, geralmente utilizado embaixo de títulos, basta utilizar três hífens seguidos "---". Lembrando que o Github, por exemplo, já exibe por padrão um traço horizontal abaixo de cada título.
 
 ```md
 ## Exemplo da utilização de traçado horizontal.
@@ -105,7 +102,6 @@ Inserindo uma quebra de linha <br>
 <br />
 
 ## Listas
----
 
 Há três tipos de listas possíveis de serem criados. Listas não numeradas, listas numeradas e checklists.
 
@@ -148,7 +144,6 @@ Por fim, é possível criar também uma lista do tipo checklist. Basta utilizar 
 <br />
 
 ## Link interno e externo
----
 
 Começando por links "internos", ou seja, hyperlinks que encaminham para uma parte do texto do próprio texto. Por exemplo, aqueles usados em sumários. Os links internos encaminham apenas títulos dentro do texto (os tópicos que são ressaltados com a # que equivale ao \<hx> no HTML).  
 Deve-se deixar entre colchetes "[]" o texto que servirá de hyperlink (o *click aqui*), seguido do "título de referência" para o qual o link encaminhará. O título de referência deve estar entre parênteses "()", iniciado por uma cerquilha "#" e os espaços, quando houver, devem ser substituídos por hífens, as letras maiúsculas, quando houver, devem ser ignoradas e a acentuação deve ser mantida.
@@ -168,7 +163,6 @@ Para criar um link externo, os hyperlinks clássicos, basta realizar o mesmo pro
 <br />
 
 ## Imagem
----
 
 Para acrescentar uma imagem, deve utilizar o ponto de exclamação "!" seguido de um título para a imagem (que não ficará aparente) entre colchetes "[]". Em seguida, entre parênteses "()", deve-se inserir o nome exato do arquivo da imagem, incluindo a extensão, iniciando-se por uma barra "/". 
 
@@ -187,7 +181,7 @@ Para isso, basta combinar os dois recursos, criando primeiro a imagem e, em segu
 
 <br />
 
-# Citação
+## Citação
 
 Muito comuns em fóruns e e-mails, é possível criar um visual de "citação" no *Markdown*. Para isso, basta utilizar o sinal de maior ">" no início de cada linha que se deseja apresentar como citação.
 A quebra de linha se dá conforme apresentado anteriormente, para representar linhas em branco, entretanto, basta apenas utilizar o sinal de maior no início da linha e deixa-la em branco.  
@@ -212,7 +206,6 @@ Assim como nos fóruns e e-mails, é possível utilizar citações de citações
 <br />
 
 ## Tabela
----
 
 É possível criar tabelas com o próprio *Markdown. Basta utilizar uma barra vertical "|" ao início da linha, e acrescentar mais uma barra vertical para cada nova coluna que se deseja acrescentar. A primeira linha corresponde ao título das colunas. Na segunda linha deve-se acrescentar dois pontos ":" seguido de um número de hífens (aqui se utiliza 5) para marcar o alinhamento horizontal dos textos nas colunas (à esquerda, centralizado, à direita).  
 Para alinhar à esquerda os dois pontos devem estar no início da sequência de hífens. Para deixar centralizado se deve utilizar dois pontos no começo e no fim da sequência de hífens. Para alinhar à direita os dois pontos deve estar ao final da sequência de hífens.  
@@ -229,7 +222,6 @@ Lembrando: deve haver uma barra vertical no início e ao fim da linha, e entre c
 <br />
 
 ## Código
----
 
 Em *Markdown* existe a possibilidade de se criar uma interface para representar as linhas de um código. De forma simples, para apenas uma única linha, basta colocar o código que se deseja representar entre acentos graves "`".  
 Para uma representação mais elaborada, são utilizados três acentos graves seguidos, na primeira e última linha, entre essas duas linhas se insere o código que se deseja representar.  
@@ -249,7 +241,6 @@ print('hello world')
 <br />
 
 ## Texto colapsado
----
 
 Uma funcionalidade possível de incluir em textos com *Markdown* é o de colapsar/recolher a partir de um trecho de texto. Mais ou menos como uma funcionalidade do tipo "Saiba mais". Resultando em um texto oculto e um título vísivel iniciado por uma seta.  
 Para cria-lo usa-se as tags \<details>\</details>, que devem englobar todo o bloco de texto, incluíndo o título. O título é criado a partir das tags \<summary>\</summary>. O texto em si deve vir após o título e antes da última tag de </details>.  
@@ -270,7 +261,7 @@ Texto a ser colapsado.
 
 <summary>Título da seção</summary>
 
-    Um outro estilo de apresentação do texto colapsado.
+    Um outro estilo de apresentação de texto colapsado.
 
 </details>
 ```
@@ -278,7 +269,6 @@ Texto a ser colapsado.
 <br />
 
 ## Nota de rodapé
----
 
 É possível inserir notas de rodapé com *Markdown, para isso é utilizado colchetes "[]" preenchido com um acento circunflexo seguido do número correspondente.  
 *O VS Code não suporta esse recurso.*
@@ -296,6 +286,5 @@ Uma nota de rodapé [^1]
 <br />
 
 ## Dicas e atalhos
----
 
 Para visualizar o aspecto final do seu texto, utilize o preview do markdown. Ele pode ser acessado pelas teclas ctrl + shift + v.
