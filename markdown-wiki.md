@@ -5,23 +5,25 @@ Esta é uma pequena wiki que aborda os principais recursos da linguagem Markdown
 <br />
 
 **Sumário**
-1. Títulos
-1. Ferramentas de destaque de texto
-1. Formatação de texto
-1. Listas
-1. Link interno e externo
-1. Imagem
-1. Citação
-1. Código
-1. Texto oculto "Saiba mais"
-1. Dicas e atalhos
+1. [Títulos](#títulos)
+1. [Ferramentas de destaque de texto](#ferramentas-de-destaque-de-texto)
+1. [Formatação de texto](#formatação-de-texto)
+1. [Listas](#listas)
+1. [Link interno e externo](#link-interno-e-externo)
+1. [Imagem](#imagem)
+1. [Citação](#citação)
+1. [Tabela](#tabela)
+1. [Código](#código)
+1. [Texto colapsado](#texto-colapsado)
+1. [Nota de rodapé](#nota-de-rodapé)
+1. [Dicas e atalhos](#dicas)
 
 <br />
 
 ## Títulos
 ---
 
-Indo do 1 ao 6, os títulos são criados com o uso de cerquilha "#" seguido de espaço.
+Podendo ir do 1 ao 6, os títulos são criados com o uso de cerquilha "#" seguido de espaço.
 
 ```md
 # Exemplo de título correspondente ao <h1> do HTML.
@@ -202,9 +204,26 @@ Um modo de indicar o autor do texto citado é colocar seu nome entre as tags \<c
 
 Assim como nos fóruns e e-mails, é possível utilizar citações de citações. Para cada nova citação, basta utilizar um sinal de maior na linha seguinte, seguido do número de sinais já utilizados.
 
-```markdown
+```md
 > Citação da citação
 >> Primeira citação
+```
+
+<br />
+
+## Tabela
+---
+
+É possível criar tabelas com o próprio *Markdown. Basta utilizar uma barra vertical "|" ao início da linha, e acrescentar mais uma barra vertical para cada nova coluna que se deseja acrescentar. A primeira linha corresponde ao título das colunas. Na segunda linha deve-se acrescentar dois pontos ":" seguido de um número de hífens (aqui se utiliza 5) para marcar o alinhamento horizontal dos textos nas colunas (à esquerda, centralizado, à direita).  
+Para alinhar à esquerda os dois pontos devem estar no início da sequência de hífens. Para deixar centralizado se deve utilizar dois pontos no começo e no fim da sequência de hífens. Para alinhar à direita os dois pontos deve estar ao final da sequência de hífens.  
+Após essa linha, pode-se formatar o número desejado de linhas com seus respectivos conteúdos, seguindo sempre o mesmo número de colunas.
+Lembrando: deve haver uma barra vertical no início e ao fim da linha, e entre cada coluna. O alinhamento de cada coluna pode ser diferente, mas ele é válido para todas as linhas da coluna, incluindo o título.
+
+```md
+| Texto à esquerda | Texto centralizado | Texto à direita |
+| :----- | :-----: | -----: |
+| Linha 2 | Linha 2 | Linha 2 |
+| Coluna 1 | Coluna 2 | Coluna 3 |
 ```
 
 <br />
@@ -212,17 +231,71 @@ Assim como nos fóruns e e-mails, é possível utilizar citações de citações
 ## Código
 ---
 
-Em *Markdown* é possível criar uma interface parecida com a citação para representar linhas de código.
+Em *Markdown* existe a possibilidade de se criar uma interface para representar as linhas de um código. De forma simples, para apenas uma única linha, basta colocar o código que se deseja representar entre acentos graves "`".  
+Para uma representação mais elaborada, são utilizados três acentos graves seguidos, na primeira e última linha, entre essas duas linhas se insere o código que se deseja representar.  
+Após os três acentos graves da primeira linha, pode-se inserir ou o nome ou a extensão do código que se está representando. Isso faz com que a formatação seja mais semelhante àquilo que se vê nos editores ou IDE's.  
+*Foi utilizado um ponto antes dos três acentos graves no primeiro exemplo abaixo por motivos de conflito com o próprio código do Markdown. O correto é iniciar a linha apenas com os três acentos.*
 
-```py
-class Aluno():
+```md
+.```py
+print('hello world')
+.```
+```
 
-    def test(self):
-        self.prestandoatencao = 1
-
-print('hello')
+```md
+`print('hello world')`
 ```
 
 <br />
 
-`print('hello')`
+## Texto colapsado
+---
+
+Uma funcionalidade possível de incluir em textos com *Markdown* é o de colapsar/recolher a partir de um trecho de texto. Mais ou menos como uma funcionalidade do tipo "Saiba mais". Resultando em um texto oculto e um título vísivel iniciado por uma seta.  
+Para cria-lo usa-se as tags \<details>\</details>, que devem englobar todo o bloco de texto, incluíndo o título. O título é criado a partir das tags \<summary>\</summary>. O texto em si deve vir após o título e antes da última tag de </details>.  
+A formatação do texto a ser colapsado segue todas as regras padrões de formatação do *Markdown*. Se o texto for indentado, ocorre uma variação na forma de apresentação do texto.
+
+```md
+<details>
+
+<summary>Título da seção</summary>
+
+Texto a ser colapsado.  
+
+</details>
+```
+
+```md
+<details>
+
+<summary>Título da seção</summary>
+
+    Um outro estilo de apresentação do texto colapsado.
+
+</details>
+```
+
+<br />
+
+## Nota de rodapé
+---
+
+É possível inserir notas de rodapé com *Markdown, para isso é utilizado colchetes "[]" preenchido com um acento circunflexo seguido do número correspondente.  
+*O VS Code não suporta esse recurso.*
+
+```md
+Uma nota de rodapé [^1]
+
+*Imagine que a linha abaixo está no fim da página*.
+
+<br />
+
+[^1]: nota de rodapé
+```
+
+<br />
+
+## Dicas e atalhos
+---
+
+Para visualizar o aspecto final do seu texto, utilize o preview do markdown. Ele pode ser acessado pelas teclas ctrl + shift + v.
