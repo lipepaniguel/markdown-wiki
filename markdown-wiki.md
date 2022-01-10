@@ -1,11 +1,5 @@
 # Markdown Wiki
 
-[click aqui para ser encaminhado](#testando-uma-frase-com-maiúsculas-e-acentos-lírico)
-
-<br />
-
-[teste hyperlink](#testando-link-1-2-3)
-
 Esta é uma pequena wiki que aborda os principais recursos da linguagem Markdown.
 
 <br />
@@ -18,9 +12,8 @@ Esta é uma pequena wiki que aborda os principais recursos da linguagem Markdown
 1. Link interno e externo
 1. Imagem
 1. Citação
-1. Texto oculto "Saiba mais"
-1. Checklist
 1. Código
+1. Texto oculto "Saiba mais"
 1. Dicas e atalhos
 
 <br />
@@ -155,15 +148,81 @@ Por fim, é possível criar também uma lista do tipo checklist. Basta utilizar 
 ## Link interno e externo
 ---
 
-Começando por links "internos", ou seja, hyperlinks que encaminham para uma parte do texto do próprio texto. Por exemplo, aqueles usados em sumários.  
-Deve-se deixar entre colchetes "[]" o texto que servirá de hyperlink, seguido do "texto de referência" para o qual o link encaminhará. O texto de referência deve estar entre colchetes "()", iniciado por uma cerquilha "#" e os espaços, quando houver, devem ser substituídos por hífens.
+Começando por links "internos", ou seja, hyperlinks que encaminham para uma parte do texto do próprio texto. Por exemplo, aqueles usados em sumários. Os links internos encaminham apenas títulos dentro do texto (os tópicos que são ressaltados com a # que equivale ao \<hx> no HTML).  
+Deve-se deixar entre colchetes "[]" o texto que servirá de hyperlink (o *click aqui*), seguido do "título de referência" para o qual o link encaminhará. O título de referência deve estar entre parênteses "()", iniciado por uma cerquilha "#" e os espaços, quando houver, devem ser substituídos por hífens, as letras maiúsculas, quando houver, devem ser ignoradas e a acentuação deve ser mantida.
 
 ```md
-[click aqui para ser encaminhado](#texto-para-onde-será-enchaminhado)
+[click aqui](#nome-do-título-para-onde-será-enchaminhado)
 ```
 
 <br />
 
-testando uma frase Com Maiúsculas e acentos lírico.
+Para criar um link externo, os hyperlinks clássicos, basta realizar o mesmo processo da criação dos links internos sem acrescentar a cerquilha ao início, mas utilizando o link da página no lugar do nome do título.
 
-testando link 1 2 3
+```md
+[click aqui](www.exemplodepaginaaleatória.com.br)
+```
+
+<br />
+
+## Imagem
+---
+
+Para acrescentar uma imagem, deve utilizar o ponto de exclamação "!" seguido de um título para a imagem (que não ficará aparente) entre colchetes "[]". Em seguida, entre parênteses "()", deve-se inserir o nome exato do arquivo da imagem, incluindo a extensão, iniciando-se por uma barra "/". 
+
+```md
+![nome da imagem](/nome-do-arquivo.png)
+```
+
+<br />
+
+É possível combinar um hyperlink com uma imagem. Em que ao se clickar na imagem, ela encaminhará para o link desejado.  
+Para isso, basta combinar os dois recursos, criando primeiro a imagem e, em seguida, torna-la o "click aqui" do link.
+
+```md
+[![nome imagem](/arquivo.png)](www.exemplo.com.br)
+```
+
+<br />
+
+# Citação
+
+Muito comuns em fóruns e e-mails, é possível criar um visual de "citação" no *Markdown*. Para isso, basta utilizar o sinal de maior ">" no início de cada linha que se deseja apresentar como citação.
+A quebra de linha se dá conforme apresentado anteriormente, para representar linhas em branco, entretanto, basta apenas utilizar o sinal de maior no início da linha e deixa-la em branco.  
+Um modo de indicar o autor do texto citado é colocar seu nome entre as tags \<cite>\</cite>, começando por dois hífens, dentro ou fora da caixa de citação.
+
+```md
+> Exemplo de citação
+>
+> Terceira linha da citação
+> -- <cite>Fulano</cite>
+```
+
+<br />
+
+Assim como nos fóruns e e-mails, é possível utilizar citações de citações. Para cada nova citação, basta utilizar um sinal de maior na linha seguinte, seguido do número de sinais já utilizados.
+
+```markdown
+> Citação da citação
+>> Primeira citação
+```
+
+<br />
+
+## Código
+---
+
+Em *Markdown* é possível criar uma interface parecida com a citação para representar linhas de código.
+
+```py
+class Aluno():
+
+    def test(self):
+        self.prestandoatencao = 1
+
+print('hello')
+```
+
+<br />
+
+`print('hello')`
