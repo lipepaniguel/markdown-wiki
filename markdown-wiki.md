@@ -2,7 +2,7 @@
 
 Esta é uma pequena wiki que aborda os principais recursos da linguagem Markdown.
 
-<br />
+<br>
 
 **Sumário**
 1. [Títulos](#títulos)
@@ -18,7 +18,7 @@ Esta é uma pequena wiki que aborda os principais recursos da linguagem Markdown
 1. [Nota de rodapé](#nota-de-rodapé)
 1. [Dicas e atalhos](#dicas-e-atalhos)
 
-<br />
+<br>
 
 ## Títulos
 
@@ -30,7 +30,7 @@ Podendo ir do 1 ao 6, os títulos são criados com o uso de cerquilha "#" seguid
 ### Exemplo de título correspondente ao <h3> do HTML.
 ```
 
-<br />
+<br>
 
 ## Ferramentas de destaque de texto
 
@@ -48,7 +48,7 @@ _também itálico_
 __também negrito__
 ```
 
-<br />
+<br>
 
 É possível utilizar um efeito de palavra ou trecho riscado, utilizando dois tils "~~", no ínicio ou fim da palavra ou trecho, sem espaços.
 
@@ -56,7 +56,7 @@ __também negrito__
 ~~Texto riscado~~
 ```
 
-<br />
+<br>
 
 ## Formatação de texto
 
@@ -67,19 +67,19 @@ Para acrescentar um traçado horizontal, geralmente utilizado embaixo de título
 ---
 ```
 
-<br />
+<br>
 
-Para acrescentar linhas em branco entre parágrafos basta utilizar \<br /> para cada linha que se deseja inserir.
+Para acrescentar linhas em branco entre parágrafos basta utilizar \<br> para cada linha que se deseja inserir.
 
 ```
 Exemplo de linha em branco entre dois parágrafos.
 
-<br />
+<br>
 
 Segundo parágrafo...
 ```
 
-<br />
+<br>
 
 Para inserir uma quebra de linha, há dois modos distintos: o primeiro deles é utilizar dois espaços no fim da linha que se deseja inserir a quebra. Nesse primeiro modo, é necessário que as linhas que se deseja estar separadas também estejam em linhas diferentes.
 
@@ -88,7 +88,7 @@ Separando linhas *dois espaços*
 utilizando dois espaços ao final da primeira linha.
 ```
 
-<br />
+<br>
 
 Um outro modo de inserir uma quebra de linha é utilizar \<br> no lugar onde se deseja que haja quebra de linha. Nesse modo as linhas que se deseja estar separadas podem ser escritas em uma mesma linha, ou em linhas distintas.
 
@@ -99,13 +99,13 @@ Inserindo uma quebra de linha <br>
 *nova linha*.
 ```
 
-<br />
+<br>
 
 ## Listas
 
 Há três tipos de listas possíveis de serem criados. Listas não numeradas, listas numeradas e checklists.
 
-<br />
+<br>
 
 Começando pela lista não númerada, há dois modos de cria-las. O primeiro é utilizando hífens "-" para a marcação de cada item, seguido de espaço. O segundo modo é utilizando asterisco "*" ao invés de hífens.
 
@@ -117,7 +117,7 @@ Começando pela lista não númerada, há dois modos de cria-las. O primeiro é 
 * item 2
 ```
 
-<br />
+<br>
 
 Listas numeradas são criadas iniciando a linha a partir do numeral correspondente ao item, seguido de um ponto final "." e um espaço. O *Markdown*, entretanto, facilita essa tarefa por possibilitar a crianção de uma lista numerada utilizando apenas o numeral 1 seguido de ponto, ficando a cargo da linguagem enumerar os itens na devida ordem.
 
@@ -131,7 +131,7 @@ Listas numeradas são criadas iniciando a linha a partir do numeral corresponden
 1. item 3
 ```
 
-<br />
+<br>
 
 Por fim, é possível criar também uma lista do tipo checklist. Basta utilizar um hífen, à exemplo das listas não numeradas, e abrir e fechar colchetes "[ ]", separando-os por um espaço. Para dar "check" em um item da lista, basta substituir o espaço entre colchetes pela letra x.  
 *Checklists não são suportadas pelo VS Code.*
@@ -141,7 +141,7 @@ Por fim, é possível criar também uma lista do tipo checklist. Basta utilizar 
 - [ ] item não marcado
 ```
 
-<br />
+<br>
 
 ## Link interno e externo
 
@@ -152,7 +152,7 @@ Deve-se deixar entre colchetes "[]" o texto que servirá de hyperlink (o *click 
 [click aqui](#nome-do-título-para-onde-será-enchaminhado)
 ```
 
-<br />
+<br>
 
 Para criar um link externo, os hyperlinks clássicos, basta realizar o mesmo processo da criação dos links internos sem acrescentar a cerquilha ao início, mas utilizando o link da página no lugar do nome do título.
 
@@ -160,7 +160,7 @@ Para criar um link externo, os hyperlinks clássicos, basta realizar o mesmo pro
 [click aqui](www.exemplodepaginaaleatória.com.br)
 ```
 
-<br />
+<br>
 
 ## Imagem
 
@@ -170,7 +170,7 @@ Para acrescentar uma imagem, deve utilizar o ponto de exclamação "!" seguido d
 ![nome da imagem](/nome-do-arquivo.png)
 ```
 
-<br />
+<br>
 
 É possível combinar um hyperlink com uma imagem. Em que ao se clickar na imagem, ela encaminhará para o link desejado.  
 Para isso, basta combinar os dois recursos, criando primeiro a imagem e, em seguida, torna-la o "click aqui" do link.
@@ -179,7 +179,7 @@ Para isso, basta combinar os dois recursos, criando primeiro a imagem e, em segu
 [![nome imagem](/arquivo.png)](www.exemplo.com.br)
 ```
 
-<br />
+<br>
 
 ## Citação
 
@@ -194,7 +194,7 @@ Um modo de indicar o autor do texto citado é colocar seu nome entre as tags \<c
 > -- <cite>Fulano</cite>
 ```
 
-<br />
+<br>
 
 Assim como nos fóruns e e-mails, é possível utilizar citações de citações. Para cada nova citação, basta utilizar um sinal de maior na linha seguinte, seguido do número de sinais já utilizados.
 
@@ -203,7 +203,7 @@ Assim como nos fóruns e e-mails, é possível utilizar citações de citações
 >> Primeira citação
 ```
 
-<br />
+<br>
 
 ## Tabela
 
@@ -219,7 +219,7 @@ Lembrando: deve haver uma barra vertical no início e ao fim da linha, e entre c
 | Coluna 1 | Coluna 2 | Coluna 3 |
 ```
 
-<br />
+<br>
 
 ## Código
 
@@ -238,7 +238,7 @@ print('hello world')
 `print('hello world')`
 ```
 
-<br />
+<br>
 
 ## Texto colapsado
 
@@ -266,7 +266,7 @@ Texto a ser colapsado.
 </details>
 ```
 
-<br />
+<br>
 
 ## Nota de rodapé
 
@@ -278,12 +278,12 @@ Uma nota de rodapé [^1]
 
 *Imagine que a linha abaixo está no fim da página*.
 
-<br />
+<br>
 
 [^1]: nota de rodapé
 ```
 
-<br />
+<br>
 
 ## Dicas e atalhos
 
