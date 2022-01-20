@@ -1,6 +1,6 @@
 # Markdown Wiki
 
-Esta é uma pequena wiki que aborda os principais recursos da linguagem Markdown.
+Essa é uma pequena wiki que aborda os principais recursos da linguagem Markdown.
 
 <br>
 
